@@ -4,8 +4,9 @@ import Home from './components/Home'
 import Contact from './components/Contact';
 import Companies from './components/Companies';
 import Joblist from './components/Joblist';
-import Jobs from './components/Jobs';
+import Job from './components/Jobs';
 import SignUp from './components/SignUp';
+import Footer from './components/Footer';
 
 
 const App = () => {
@@ -17,11 +18,11 @@ const App = () => {
         <Route path='/home' element={<Home />}/>
         <Route path='/contact' element={<Contact />}/>
         <Route path='/companies' element={<Companies />}/>
-        <Route path='/joblist' element={<Joblist />}/>
-        <Route path='/jobs' element={<Jobs />}/>
         <Route path='/signup' element={<SignUp />}/>
-
+        <Route path="/job" element={<Joblist />} />{/*searchQuery={searchQuery} */}
+      <Route path="/job/:jobId" element={<Job />} />
         </Routes>
+      <Footer />
     </Router>
     
   )

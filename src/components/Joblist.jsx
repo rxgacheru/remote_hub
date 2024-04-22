@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-const JobList = () => {
+const Joblist = () => {
     const [jobs, setJob] = useState([]);
     const fetchJob = async () => {
         try {
@@ -41,4 +41,4 @@ const JobList = () => {
         </div>
     );
 };
-export default JobList;
+export default Joblist;
