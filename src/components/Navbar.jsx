@@ -1,6 +1,10 @@
 import {Link} from 'react-router-dom';
+import { useState, useEffect } from 'react';
+
 
 const Navbar = () => {
+  const [character, setCharacter] = useState([]);
+
   return (
     <nav className='bg-orange-800 py-4'>
       <div className="container mx-auto flex justify-between items-center">
@@ -10,7 +14,7 @@ const Navbar = () => {
         <Link to='/home' className="text-gray-300">Remote Hub</Link>
         </li>
         <li>
-        <Link to='/home' className="text-gray-300">Jobs</Link>
+        <Link to='/job' className="text-gray-300">Jobs</Link>
         </li>
          <li>
         <Link to='/home' className="text-gray-300">Companies</Link>

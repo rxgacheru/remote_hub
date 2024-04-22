@@ -1,4 +1,5 @@
 import { useLocation } from 'react-router-dom';
+
 const Job = () => {
     const { state: job } = useLocation();
     console.log(job);
@@ -18,4 +19,5 @@ const Job = () => {
         </div>
     );
 };
+
 export default Job;
