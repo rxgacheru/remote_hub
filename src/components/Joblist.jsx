@@ -1,44 +1,53 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 const Joblist = () => {
-    const [jobs, setJob] = useState([]);
-    const fetchJob = async () => {
+    const [jobs, setJobs] = useState([]);
+    const fetchJobs = async () => {
         try {
-            const response = await fetch('https://remotive.com/api/remote-jobs');
+            const response = await fetch(' https://himalayas.app/jobs/api?limit=100&offset=10');
             if (!response.ok) {
-                throw new Error('Failed to fetch Job');
+                throw new Error('Failed to fetch job');
             }
             const data = await response.json();
-            setJob(data.results);
+            setJobs(data.jobs);
+            console.log(jobs)
+            .then(response => response.json())
+            .then(json => setJobs(json)) 
         } catch (error) {
-            console.error('Error fetching Job:', error);
-            setJob([]);
+            con
+            setJobs([]);
         }
     };
     useEffect(() => {
-        fetchJob();
+        fetchJobs();
+        console.log(jobs);      
+
     }, []);
-    console.log(jobs);
+
     return (
-        <div className='grid grid-cols-3 gap-4'>
+        
+        <div className='grid grid-cols-3 gap-4 bg-gray-700'>
             {
-                jobs.map((job) => (
-                    <div key={job.id} className='border p-4'>
+                    jobs.map((job) => (
+    
+                    <div key={job.id}  className='border p-4 bg-white'>
                         <p>{job.id}</p>
                         <Link to={`/job/${job.id}`} state={job}>
-                         <img src={job.company_logo} alt={job.title}/>
+                         <img src={job.image} />
                          </Link>
-                        <h4>{job.company_name}</h4>
-                         <p > {job.category}</p>
-                        <p> {job.job_type}</p>
-                        <p>{job.publication}</p>
-                      <p> {job.salary}</p> 
+                         <h4>{`Company: ${job.companyName}`}</h4>
+                         <p> {`Min Salary : Ksh ${job.minSalary}`}</p>
+                         <p>{`Max Salary : Ksh ${job.maxSalary}`}</p>
+                         <p>{`Location : ${job.locationRestrictions}`}</p>
+                         <p>{`Seniority : ${job.seniority}`}</p>
                         <Link to={`/job/${job.id}`} state={job}>
                             <button className='block w-full mt-2 bg-blue-300 hover'>View Job</button>
                         </Link>
                     </div>
-                ))}
+                ))
+              }
         </div>
     );
 };
-export default Joblist;
+
+export default Joblist; 

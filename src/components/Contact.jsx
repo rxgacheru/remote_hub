@@ -2,9 +2,36 @@ import { Link } from "react-router-dom"
 const   Contact = () => {
   return (
     <div>
-      <h1 class="hh1">Contact Us </h1>
+      <form action="https://formspree.io/f/mleqpger" method="POST" className="w-full max-w-lg text-center p-9" >
+        <div  class="flex flex-wrap -mx-3 mb-6">
+          <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <label for="exampleInputPassword1"  name="Name" className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 ">First Name :</label>
+            <input type="text" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" placeholder="John" aria-label="name" required name="Name"/>
+          </div>
+          <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <label for="exampleInputPassword1"  name="Name" className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >Last Name :</label>
+            <input type="text" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" placeholder="Doe" aria-label="name" required name="Name" />
+          </div>
+          <div className="w-full md:w-1/2 px-3 md:mb-0">
+          <label for="exampleInputEmail1" class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" placeholder="Your email...">Email :</label>
+          <input type="email" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="exampleInputEmail1" aria-describedby="emailHelp" required name="Message" placeholder="johndoe@gmail.com"/>
+        </div>
+          <div className="w-full md:w-1/2 px-3 md:mb-0">
+            <label for="exampleInputPassword1"  name="country" className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Country :</label>
+            <input type="text" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" placeholder="Country..." aria-label="First name" required name="fName"/>
+          </div>
+          </div>
+          <div className="w-full md:w-1/2 px-3 md:mb-0">
+          <label for="exampleFormControlTextarea1" className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" name="Message">Subject :</label>
+          <textarea id="exampleFormControlTextarea1" placeholder="Message..." rows="4" cols="9" required name="Text" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-9 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"></textarea>
+        </div>
+  
+        <div class="">
+          <button className="text-white bg-yellow-900 hover:bg-yellow-950 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:focus:ring-yellow-900" type="submit">Submit</button>
+        </div>
+      </form>
     </div>
-  )
-  }
+    )
+}
 
 export default Contact;

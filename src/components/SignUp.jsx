@@ -1,10 +1,16 @@
-import { Link } from "react-router-dom"
-const   SighUp = () => {
-  return (
-    <h1 className="text-3xl font-bold">
-      Contact Us
-    </h1>
-  )
-  }
+import { GoogleLogin } from '@react-oauth/google';
 
-export default SighUp;
+const   SignUp = () => {
+  return( <GoogleLogin
+  onSuccess={credentialResponse => {
+    console.log(credentialResponse);
+  }}
+  onError={() => {
+    console.log('Login Failed');
+  }}
+/>
+);
+}
+  
+
+export default SignUp;
