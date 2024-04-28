@@ -26,21 +26,22 @@ const Joblist = () => {
 
     return (
         
-        <div className='grid grid-cols-3 gap-4 bg-gray-700 rounded-full gap-x-4'>
+        <div className='grid grid-cols-3 gap-4 bg-white rounded-full gap-x-4 text-gray-800'>
             {
                     jobs.map((job) => (
     
-                    <div key={job.id}  className='border p-4 bg-white'>
+                    <div key={job.id}  className='border p-3 bg-neutral-400 ml-9 mr-9 mt-8 mb-8
+                    rounded-lg font-bold mt-5 '>
                         <p>{job.id}</p>
                         <Link to={`/job/${job.id}`} state={job}>
-                         <img className='rounded-t-lg' src={job.image} />
+                         <img className='rounded-lg mt-3' src={job.image} />
                          </Link>
-                         <h4>{`Company: ${job.companyName}`}</h4>
-                         <p> {`Min Salary : Ksh${job.minSalary} - Ksh${job.maxSalary}`}</p>
+                         <h4 className='mt-4 '>{`Company: ${job.companyName}`}</h4>
+                         <p> {`Salary Range : Ksh${job.minSalary} - Ksh${job.maxSalary}`}</p>
                          <p>{`Location : ${job.locationRestrictions}`}</p>
                          <p>{`Seniority : ${job.seniority}`}</p>
                         <Link to={`/job/${job.id}`} state={job}>
-                            <button className='block w-full mt-2 bg-blue-300 hover'>View Job</button>
+                            <button className='text-white bg-yellow-900 hover:bg-yellow-950 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-large rounded-full text-sm px-20 py-4 text-center me-2 mb-2 dark:focus:ring-yellow-900 text-2xl font-bold ml-16 mt-6'>View Job</button>
                         </Link>
                     </div>
                 ))
