@@ -26,18 +26,17 @@ const Joblist = () => {
 
     return (
         
-        <div className='grid grid-cols-3 gap-4 bg-gray-700'>
+        <div className='grid grid-cols-3 gap-4 bg-gray-700 rounded-full'>
             {
                     jobs.map((job) => (
     
                     <div key={job.id}  className='border p-4 bg-white'>
                         <p>{job.id}</p>
                         <Link to={`/job/${job.id}`} state={job}>
-                         <img src={job.image} />
+                         <img className='rounded-t-lg' src={job.image} />
                          </Link>
                          <h4>{`Company: ${job.companyName}`}</h4>
-                         <p> {`Min Salary : Ksh ${job.minSalary}`}</p>
-                         <p>{`Max Salary : Ksh ${job.maxSalary}`}</p>
+                         <p> {`Min Salary : Ksh${job.minSalary} - Ksh${job.maxSalary}`}</p>
                          <p>{`Location : ${job.locationRestrictions}`}</p>
                          <p>{`Seniority : ${job.seniority}`}</p>
                         <Link to={`/job/${job.id}`} state={job}>
