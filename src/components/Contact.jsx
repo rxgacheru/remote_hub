@@ -23,13 +23,13 @@ const   Contact = () => {
             <input type="text" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" placeholder="Kenya" aria-label="First name" required name="fName"/>
           </div>
           </div>
-          <div className="w-full md:w-1/2 px-3 md:mb-0">
+          <div className="w-full md:w-2/8 px- md:mb-0">
           <label for="exampleFormControlTextarea1" className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" name="Message">Subject :</label>
           <textarea id="exampleFormControlTextarea1" placeholder="Message..." rows="9" cols="9" required name="Text" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"></textarea>
         </div>
   
         <div class="w-full md:w-1/2 px-3 md:mb-0">
-          <button className="text-white bg-yellow-900 hover:bg-yellow-950 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-9 py-2.5 text-center me-2 mb-1 dark:focus:ring-yellow-900 mt-6" type="submit">Submit</button>
+          <button className="text-white bg-yellow-900 hover:bg-yellow-950 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-9 py-2.5 text-center me-2 mb-1 dark:focus:ring-yellow-900 mt-6 ml-20" type="submit">Submit</button>
         </div>
       </form>
     </div>

@@ -26,7 +26,7 @@ const Joblist = () => {
 
     return (
         
-        <div className='grid grid-cols-3 gap-4 bg-white rounded-full gap-x-4 text-gray-800'>
+        <div className='grid grid-cols-3 gap-4 bg-white rounded-full gap-x-4 text-gray-800 text-base lg:text-lg'>
             {
                     jobs.map((job) => (
     
