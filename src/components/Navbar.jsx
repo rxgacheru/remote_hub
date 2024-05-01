@@ -5,7 +5,7 @@ const Navbar = () => {
   const [job, setJob] = useState([]);
 
   return (
-    <nav className='bg-yellow-900 py-9'>
+    <nav className='bg-yellow-900 py-6'>
       <div className="container mx-auto flex justify-between items-center font-bold text-xl">
       <Link to='/' className="text-gray-300">RemoteHub</Link>
       <ul className="flex justify-center space-x-4">

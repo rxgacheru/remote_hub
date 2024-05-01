@@ -37,7 +37,7 @@ const Joblist = () => {
                          <img className='rounded-lg mt-3' src={job.image} />
                          </Link>
                          <h4 className='mt-4 '>{`Company: ${job.companyName}`}</h4>
-                         <p> {`Salary Range : Ksh${job.minSalary} - Ksh${job.maxSalary}`}</p>
+                         <p> {`Salary Range : ${job.minSalary}USD - ${job.maxSalary}USD`}</p>
                          <p>{`Location : ${job.locationRestrictions}`}</p>
                          <p>{`Seniority : ${job.seniority}`}</p>
                         <Link to={`/job/${job.id}`} state={job}>
