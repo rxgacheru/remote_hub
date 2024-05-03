@@ -26,7 +26,7 @@ const Joblist = () => {
 
     return (
         
-        <div className='grid grid-cols-3 gap-4 bg-white rounded-full gap-x-4 text-gray-800 text-base lg:text-lg'>
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-2 bg-white rounded-full gap-x-4 text-gray-800 text-base lg:text-lg'>
             {
                     jobs.map((job) => (
     
@@ -38,8 +38,7 @@ const Joblist = () => {
                          </Link>
                          <h4 className='mt-4 '>{`Company: ${job.companyName}`}</h4>
                          <p> {`Salary Range : ${job.minSalary}USD - ${job.maxSalary}USD`}</p>
-                         <p>{`Location : ${job.locationRestrictions}`}</p>
-                         <p>{`Seniority : ${job.seniority}`}</p>
+                         <p >{`Seniority : ${job.seniority}`}</p>
                         <Link to={`/job/${job.id}`} state={job}>
                             <button className='text-white bg-yellow-900 hover:bg-yellow-950 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-large rounded-full text-sm px-20 py-4 text-center me-2 mb-2 dark:focus:ring-yellow-900 text-2xl font-bold ml-16 mt-6'>View Job</button>
                         </Link>

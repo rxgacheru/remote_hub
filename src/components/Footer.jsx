@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 
 const Footer = () => {
   return (
-    <footer className='bg-yellow-900 py-0 fixed bottom-0 w-full text-center decoration-8 font-serif 100-vh'>
+    <footer className='bg-yellow-900 py-0 bottom-0 text-center decoration-8 font-serif 100-vh'>
       <div className="/">
         <h1 className='text-gray-300'>Contact Us On:</h1>
         <div className="/">

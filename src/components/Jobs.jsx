@@ -12,6 +12,7 @@ const Job = () => {
             <p className='text-gray-800'><strong> Company Name:</strong> {job.CompanyName}</p>
             <p className='text-gray-800'><strong>Category:</strong> {job.category}</p>
             <p className='text-gray-800'><strong>Salary range:</strong> USD{job.minSalary} - USD{job.maxSalary}</p>
+            <p className='text-gray-800'><strong>Location:</strong>{job.locationRestrictions}</p>
             <p className='text-gray-800'><strong>Job Position:</strong> {job.seniority}</p>
             <a href={job.applicationLink}><button className="text-white bg-yellow-900 hover:bg-yellow-950 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-large rounded-full text-sm px-20 py-5 text-center me-2 mb-3 dark:focus:ring-yellow-900 text-2xl text-bold mt-3 ml-24">Apply Now</button></a>
             
